@@ -18,3 +18,5 @@ settings = {
 
 #日志
 log_path = os.path.join(os.path.dirname(__file__),'logs/log')
+static_path = os.path.join(os.path.dirname(__file__),"static")
+print(static_path)

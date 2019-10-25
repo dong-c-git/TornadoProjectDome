@@ -4,7 +4,7 @@ import tornado.ioloop
 import tornado.httpserver
 
 class IndexHandler(tornado.web.RequestHandler):
-    """主路由器处理类"""
+    """主页处理类"""
     def get(self):
         """对应http请求的get方法"""
         self.write("hello world tornado")

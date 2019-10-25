@@ -4,7 +4,7 @@ import tornado.ioloop
 import tornado.httpserver
 import tornado.options
 
-
+#options处理获取参数
 tornado.options.define("port",default=8090,type=int,help="run server on the givent port")
 tornado.options.define("hello",default=[],type=str,multiple=True,help="hello is test help")
 class IndexHandler(tornado.web.RequestHandler):

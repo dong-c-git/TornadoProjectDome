@@ -5,6 +5,9 @@ import tornado.options
 import tornado.httpserver
 import json
 
+#set_default_headers方法
+#set_status状态码设置
+#redirect跳转
 tornado.options.define("port",default="8090",type=int,help="this is runserver")
 class IndexHandler(tornado.web.RequestHandler):
 
@@ -42,6 +45,7 @@ class IndexHandler(tornado.web.RequestHandler):
         self.set_header("itcast","post")
         self.write(stu_json)
         self.set_status(210,"itcast error")  #非标准状态码
+
 class Err211Handler(tornado.web.RequestHandler):
     """对应/err/211"""
     def get(self):

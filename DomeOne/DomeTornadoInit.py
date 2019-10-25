@@ -4,6 +4,7 @@ import tornado.ioloop
 import tornado.options
 import tornado.httpserver
 
+#tornado各方法调用顺序
 tornado.options.define("port",default="8090",type=int,help="runserver")
 class IndexHandler(tornado.web.RequestHandler):
     """接口调用顺序"""

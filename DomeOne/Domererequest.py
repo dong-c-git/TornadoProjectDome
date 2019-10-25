@@ -5,6 +5,8 @@ import tornado.httpserver
 import tornado.options
 import re
 
+
+#正则匹配参数中传递的参数
 tornado.options.define("port",default=8090,type=int,help="this is runserver")
 class IndexHandler(RequestHandler):
     """正则请求相关练习"""

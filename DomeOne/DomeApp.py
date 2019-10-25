@@ -30,7 +30,11 @@ class SubjectHandler(RequestHandler):
 if __name__ == '__main__':
     tornado.options.parse_command_line()
     print(tornado.options.options.port)
-    app = tornado.web.Application([(r'/',IndexHandler),(r'/python',SubjectHandler,{"subject":"python"}),url(r"/cpp",SubjectHandler,{"subject":"cpp"},name="cpp_url"),],debug=True)
+    app = tornado.web.Application([(r'/',IndexHandler),
+                                   (r'/python',SubjectHandler,{"subject":"python"}),
+                                   url(r"/cpp",SubjectHandler,{"subject":"cpp"},name="cpp_url"),
+                                   ],
+                                  debug=True)
     http_server = tornado.httpserver.HTTPServer(app)
     http_server.bind(tornado.options.options.port)
     http_server.start()

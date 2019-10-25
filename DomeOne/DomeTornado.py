@@ -2,6 +2,7 @@
 import tornado.web    #tornadoweb框架和核心模块
 import tornado.ioloop
 
+#简易版本的tornado
 class IndexHandler(tornado.web.RequestHandler):
     """主页处理"""
 

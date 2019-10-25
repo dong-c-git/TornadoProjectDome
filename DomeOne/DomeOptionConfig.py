@@ -4,7 +4,7 @@ import tornado.ioloop
 import tornado.options
 import tornado.httpserver
 #from tornado.options import options,parse_command_line,parse_config_file
-#py日志文件的配置：
+#py通过导入方式加载文件中的配置：
 import config
 
 tornado.options.define("port",default="8090",type=int,help="run server on the givent port")

@@ -4,10 +4,11 @@ import tornado.ioloop
 import tornado.options
 import tornado.httpserver
 
+#获取各请求中的参数处理：
 tornado.options.define("port",default=8090,type=int,help="runserver aways")
 
 class IndexHandler(RequestHandler):
-    """首页展示"""
+    """首页处理"""
     def post(self):
         query_arg = self.get_query_argument("a")
         query_args = self.get_query_arguments("a")

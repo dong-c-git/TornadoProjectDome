@@ -5,6 +5,9 @@ import tornado.options
 from tornado.web import MissingArgumentError
 import tornado.httpserver
 
+
+
+#tornado获取数据类型方法模型
 tornado.options.define("port",default=8090,type=int,help="need runserver give port")
 
 class IndexHandler(tornado.web.RequestHandler):

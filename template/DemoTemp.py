@@ -4,6 +4,7 @@ import tornado.ioloop
 import tornado.options
 import tornado.httpserver
 
+#basehandler方法抽象
 def title_join(titles):
     return "_".join(titles)
 
