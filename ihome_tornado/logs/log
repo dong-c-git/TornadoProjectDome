@@ -1,0 +1,6 @@
+[D 191028 22:51:03 selector_events:53] Using selector: KqueueSelector
+[W 191028 22:52:08 web:2246] 405 GET /api/register (127.0.0.1) 9.66ms
+[W 191028 22:52:21 web:1782] 403 POST /api/register (127.0.0.1): '_xsrf' argument missing from POST
+[W 191028 22:52:21 web:2246] 403 POST /api/register (127.0.0.1) 6.64ms
+[D 191028 22:54:35 selector_events:53] Using selector: KqueueSelector
+[I 191028 22:54:46 web:2246] 200 GET /api/register (127.0.0.1) 6.89ms

@@ -10,7 +10,7 @@ import pymysql
 import config
 import redis
 
-from handler import Passport
+from handlers import Passport
 from urls import urls
 from tornado.options import options,define
 
@@ -30,7 +30,7 @@ def main():
         **config.settings
     )
     http_server = tornado.httpserver.HTTPServer(app)
-    http_server.listen(options.port)
+    http_server.listen(tornado.options.options.port)
     tornado.ioloop.IOLoop.current().start()
 
 if __name__ == '__main__':
