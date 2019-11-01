@@ -20,6 +20,7 @@ class Application(tornado.web.Application):
     def __init__(self,*args,**kwargs):
         super(Application,self).__init__(*args,**kwargs)
         self.redis = redis.StrictRedis(**config.redis_options)
+        self.db = pymysql.connect(**config.mysql_config)
 
 def main():
     options.log_file_prefix = config.log_path

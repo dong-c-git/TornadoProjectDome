@@ -9,7 +9,12 @@ class BaseHandler(RequestHandler):
     @property
     def db(self):
         """作为RequestHandler对象的db属性"""
-        return self.application.db
+        return self.application.db.cursor()
+
+    @property
+    def connclose(self):
+        """关闭数据库连接"""
+        return self.application.db.close()
 
     @property
     def redis(self):
